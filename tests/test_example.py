@@ -1,6 +1,6 @@
 #/usr/bin/env python3
 
-
+import os
 import unittest
 import example.example as e
 
@@ -17,6 +17,16 @@ class TestExample(unittest.TestCase):
 
 	def test_multiply(self):
 		assert e.multiply(2, 3) == 6
+
+	def test_inputpath(self):
+		if 'TESTINPUTPATH' in os.environ:
+			TestInputDir = os.environ["TESTINPUTPATH"]
+			print('TestInputDir:', TestInputDir)
+			self.assertTrue(os.path.exists(TestInputDir),
+							"Test input directory specified by TESTINPUTPATH environment variable does not exist")
+			return TestInputDir
+		else:
+			self.fail("TESTINPUTPATH environment variable should specfify input data directory")
 
 
 if __name__ == '__main__':

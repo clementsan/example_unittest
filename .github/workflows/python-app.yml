@@ -37,7 +37,7 @@ jobs:
       run: |
         echo ${{ github.workspace }}
         mkdir -p $GITHUB_WORKSPACE/testdata 
-        echo "TESTDATAPATH=${{ github.workspace }}/testdata" >> $GITHUB_ENV
+        echo "TESTINPUTPATH=${{ github.workspace }}/testdata" >> $GITHUB_ENV
     - name: Test with unittest
       run: |
         python -m unittest discover -s ./tests  -p 'test_*.py'
