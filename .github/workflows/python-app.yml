@@ -39,14 +39,21 @@ jobs:
         echo ${{ github.workspace }}
         mkdir -p ${{ github.workspace }}/testdata 
         echo "TESTINPUTPATH=${{ github.workspace }}/testdata" >> $GITHUB_ENV
-        echo $TESTINPUTPATH
     - name: Create test data folder for Windows
       if: runner.os == 'Windows'
       run: |
         echo ${{ github.workspace }}
         mkdir -p ${{ github.workspace }}\testdata 
         echo "TESTINPUTPATH=${{ github.workspace }}\testdata" >> $env:GITHUB_ENV
+    - name: Echo test data folder (Mac and linux)
+      if: runner.os != 'Windows'
+      run: |
+        echo $TESTINPUTPATH
+    - name: Echo test data folder for Windows
+      if: runner.os == 'Windows'
+      run: |
         echo $env:TESTINPUTPATH
+    
     - name: Test with unittest
       run: |
         python -m unittest discover -s ./tests  -p 'test_*.py'
