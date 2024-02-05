@@ -43,8 +43,8 @@ jobs:
       if: runner.os == 'Windows'
       run: |
         echo ${{ github.workspace }}
-        mkdir -p ${{ github.workspace }}\testdata 
-        echo "TESTINPUTPATH=${{ github.workspace }}\testdata" >> $env:GITHUB_ENV
+        mkdir -p ${{ github.workspace }}/testdata 
+        echo "TESTINPUTPATH=${{ github.workspace }}/testdata" >> $env:GITHUB_ENV
     - name: Echo test data folder (Mac and linux)
       if: runner.os != 'Windows'
       run: |
