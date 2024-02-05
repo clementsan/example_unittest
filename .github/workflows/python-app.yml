@@ -47,7 +47,8 @@ jobs:
       if: runner.os == 'Windows'
       run: |
         echo ${{ github.workspace }}
-        mkdir -p ${{ github.workspace }}\testdata ${{ github.workspace }}\testdata_output
+        mkdir -p ${{ github.workspace }}\testdata 
+        mkdir -p ${{ github.workspace }}\testdata_output
         echo "TESTINPUTPATH=${{ github.workspace }}\testdata" >> $env:GITHUB_ENV
         echo "TESTOUTPUTPATH=${{ github.workspace }}\testdata_output" >> $env:GITHUB_ENV
 
