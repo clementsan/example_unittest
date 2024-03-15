@@ -3,12 +3,14 @@
 import os
 import unittest
 import example.example as e
-
+import example_package_clem.example as e_clem
 
 class TestExample(unittest.TestCase):
 
-	def test_add(self):
+	def test_add_one(self):
+		assert e_clem.add_one(2) == 3
 
+	def test_add(self):
 		assert e.add(2, 3) == 5
 		assert e.add("space", "ship") == "spaceship"
 
