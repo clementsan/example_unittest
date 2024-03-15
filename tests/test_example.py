@@ -10,6 +10,9 @@ class TestExample(unittest.TestCase):
 	def test_add_one(self):
 		assert e_clem.add_one(2) == 3
 
+	def test_subtract_one(self):
+		assert e_clem.subtract_one(2) == 1
+
 	def test_add(self):
 		assert e.add(2, 3) == 5
 		assert e.add("space", "ship") == "spaceship"
