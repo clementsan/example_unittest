@@ -1,6 +1,6 @@
 #/usr/bin/env python3
 
-from nornir_shared import prettyoutput
+import example_pypi_packaging
 
 def add(a, b):
     return a + b
