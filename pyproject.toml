@@ -16,7 +16,7 @@ dependencies = [
   "scipy",
   "six",
   "matplotlib",
-  "example_pypi_packaging @ git+https://github.com/clementsan/example_pypi_packaging#egg=example_pypi_packaging-1.0.0",
+  "example_package_clem @ git+https://github.com/clementsan/example_pypi_packaging#egg=example_package_clem-1.0.0",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

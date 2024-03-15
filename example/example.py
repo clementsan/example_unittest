@@ -1,6 +1,6 @@
 #/usr/bin/env python3
 
-import example_pypi_packaging
+import example_package_clem
 
 def add(a, b):
     return a + b
