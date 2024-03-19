@@ -16,8 +16,8 @@ dependencies = [
   "scipy",
   "six",
   "matplotlib",
-  "nornir_shared @ git+https://github.com/clementsan/nornir-shared@dev#egg=nornir_shared-1.5.1",
-  "nornir_pools @ git+https://github.com/clementsan/nornir-pools@dev#egg=nornir_pools-1.5.1",
+  "nornir_shared @ git+https://github.com/clementsan/nornir-shared.git@dev",
+  "nornir_pools @ git+https://github.com/clementsan/nornir-pools.git@dev",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
