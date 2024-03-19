@@ -13,6 +13,11 @@ on:
 permissions:
   contents: read
 
+env:
+  CURSES: False
+  TERM: xterm
+  ECLIPSE: ECLIPSE
+
 jobs:
   build:
 
