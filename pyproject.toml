@@ -2,6 +2,9 @@
 requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.packages]
+find = {}
+
 [project]
 name = "example_unittest"
 version = "0.0.1"
@@ -28,6 +31,3 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/clementsan/example_unittest"
 Issues = "https://github.com/clementsan/example_unittest/issues"
-
-[tool.setuptools.packages.find]
-where = ["example"]
